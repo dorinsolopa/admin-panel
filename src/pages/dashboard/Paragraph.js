@@ -3,7 +3,7 @@ import React from "react";
 class Paragraph extends React.Component {
   render() {
     return (
-      <div className="card shadow col-xl-5 m-2">
+      <div className="card shadow ">
         <div className="card-header">
           <h5 className="font-weight text-primary">Development Approach</h5>
         </div>

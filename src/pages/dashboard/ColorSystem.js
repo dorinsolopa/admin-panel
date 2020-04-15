@@ -1,24 +1,19 @@
 import React from "react";
 import { color } from "../../components/variable/Variable";
-
+import ColorCard from "../../components/color-card/ColorCard";
 class ColorSystem extends React.Component {
   render() {
     return (
-      <div className="card shadow col-lg-6">
-        {color.map((ex, index) => {
-          return (
-            <div className="">
-              <div className="mb-4">
-                <div className={`card bg-${ex.color} text-white shadow`}>
-                  <div className="card-body">
-                    {ex.text}
-                    <div className="text-white-50 small"> {ex.small} </div>
-                  </div>
-                </div>
+      <div className="card shadow ">
+        <div className="row mt-4">
+          {color.map((ex, index) => {
+            return (
+              <div className="col-md-6">
+                <ColorCard color={ex.color} text={ex.text} small={ex.small} />
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     );
   }

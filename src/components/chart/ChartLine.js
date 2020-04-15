@@ -61,7 +61,7 @@ class Chart extends React.Component {
 
   render() {
     return (
-      <div className="card shadow col-7 col-lg-7 mr-3">
+      <div className="card shadow ">
         <div className="card-header">
           <h5 className="font-weight text-primary">Earnings Overview</h5>
         </div>

@@ -34,13 +34,29 @@ class Dashboard extends React.Component {
             );
           })}
         </div>
-        <div className="d-flex align-content-around flex-wrap ">
-          <Chart chartData={this.props.chartData} legendPosition="bottom" />
-          <ChartPie legendPosition="bottom" />
-          <HorizontalBar />
-          <Illustrations />
-          <ColorSystem />
-          <Paragraph />
+        <div className="row  ">
+          <div className="col-lg-8">
+            <Chart chartData={this.props.chartData} legendPosition="bottom" />
+            </div>
+            <div className="col-lg-4">
+            <ChartPie legendPosition="bottom" />
+            </div>
+            </div>
+            <div className="row">
+            <div className="col-lg-6">
+            <HorizontalBar />
+            </div>
+            <div className="col-lg-6">
+            <Illustrations />
+            </div>
+            </div>
+            <div className="row">
+            <div className="col-lg-6">
+            <ColorSystem />
+            </div>
+            <div className="col-lg-6">
+            <Paragraph />
+          </div>
         </div>
         <footer className="text-center">Copyright © Your Website 2020</footer>
       </React.Fragment>

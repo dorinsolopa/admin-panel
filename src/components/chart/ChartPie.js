@@ -35,7 +35,7 @@ class ChartPie extends React.Component {
 
   render() {
     return (
-      <div className="card shadow col-4 col-lg-4">
+      <div className="card shadow ">
         <div className="card-header ">
           <h5 className="font-weight text-primary">Revenue Sources</h5>
         </div>

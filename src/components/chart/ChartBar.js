@@ -43,7 +43,7 @@ class ChartBar extends React.Component {
 
   render() {
     return (
-      <div className="card shadow col-7 col-lg-7 m-2">
+      <div className="card shadow ">
         <div className="card-header py-3">
           <h5 className="font-weight text-primary">Bar Chart</h5>
         </div>

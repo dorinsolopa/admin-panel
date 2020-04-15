@@ -3,7 +3,7 @@ import {chartBar} from "../variable/Variable"
 class HorizontalBar extends React.Component {
   render() {
     return (
-      <div className="card shadow col-xl-6 m-2">
+      <div className="card shadow ">
         <div className="card-header py-3">
           <h5 className="font-weight text-primary"> Project </h5>
         </div>
