@@ -2,33 +2,30 @@ export const cardsData = [
   {
     title: "EARNINGS (MONTHLY)",
     price: "$40,000",
-    icon: "fa fa-calendar-o",
+    icon: "fa fa-calendar fa-2x ",
     type: "primary",
   },
   {
     title: "EARNINGS (ANNUAL)",
     price: "$215,000 ",
-    icon: "fa fa-dollar",
+    icon: "fa fa-dollar fa-2x",
     type: "success",
   },
   {
     title: "TASKS",
     price: "50% ",
-    icon: "fa fa-tasks",
+    icon: "fa fa-tasks fa-2x",
     type: "info",
   },
   {
     title: "PENDING REQUESTS",
     price: "18",
-    icon: "fa fa-comments",
+    icon: "fa fa-comments fa-2x",
     type: "warning",
   },
 ];
 
-
 export const tableData = [
- 
-
   {
     name: "Airi Satou",
     position: "Accountant",
@@ -70,10 +67,10 @@ export const tableData = [
     salary: "$206,850",
   },
   {
-    name: "Airi Satou",
+    name: "Airi John",
     position: "Accountant",
-    office: "Tokyo",
-    age: "33",
+    office: "China",
+    age: "84",
     startDate: "2008/11/28",
     salary: "$162,700",
   },
@@ -81,38 +78,97 @@ export const tableData = [
     name: "Airi Satou",
     position: "Accountant",
     office: "Tokyo",
-    age: "33",
+    age: "25",
     startDate: "2008/11/28",
     salary: "$162,700",
   },
+  {
+    name: "Bruno Nash",
+    position: "	Software Engineer",
+    office: "San Francisco",
+    age: "66",
+    startDate: "2009/01/12",
+    salary: "$86,000",
+  },
+  {
+    name: "Caesar Vance",
+    position: "Senior Javascript Developer",
+    office: "San Francisco",
+    age: "66",
+    startDate: "2009/01/12",
+    salary: "$86,000",
+  },
+  {
+    name: "Cedric Kelly",
+    position: "	Sales Assistant",
+    office: "San Francisco",
+    age: "66",
+    startDate: "2009/01/12",
+    salary: "$86,000",
+  },
 ];
 
+export const chartBar = [
+  {
+    name: "Server Migration ",
+    load: "20%",
+    color: "danger",
+    width: "20%",
+  },
+  {
+    name: "Sales Tracking ",
+    load: "40%",
+    color: "warning",
+    width: "40%",
+  },
+  {
+    name: "Customer Databas",
+    load: "60%",
+    width: "60%",
+  },
+  {
+    name: "Payout Details ",
+    load: "80%",
+    color: "info",
+    width: "80%",
+  },
+  {
+    name: "Account Setup ",
+    load: "Complet!",
+    color: "success",
+    width: "100%",
+  },
+];
 
-// export const chartData = {
-//   animationEnabled: true,
-//   title:"Earnings Overview",
-//   axisX:{valueFormatString:"MMM"},
-//   axisY:{title: "Sale(in USD)",
-//   prefix:"$",
-//   includeZero:false
-// },
-// data:[{
-//   yValueFormatString:"$#, ###",
-//   xValueFormatString:"MMM",
-//   type:'spline',
-//   dataPoints:[
-//     {x: new Date (2020 ,0) , y: 0},
-//     {x: new Date (2020 ,1) , y: 10.000},
-//     {x: new Date (2020 ,2) , y: 5000},
-//     {x: new Date (2020 ,3) , y: 15.000},
-//     {x: new Date (2020 ,4) , y: 10.000},
-//     {x: new Date (2020 ,5) , y: 20.000},
-//     {x: new Date (2020 ,6) , y: 15.000},
-//     {x: new Date (2020 ,7) , y: 25.000},
-//     {x: new Date (2020 ,8) , y: 20.000},
-//     {x: new Date (2020 ,9) , y: 30.000},
-//     {x: new Date (2020 ,10) , y: 25.000},
-//     {x: new Date (2020 ,11) , y: 40.000},
-//   ]
-// }]
-// }
+export const color = [
+  {
+    color: "primary",
+    text: "Primary",
+    small: "#4e73df",
+  },
+  {
+    color: "success",
+    text: "Success",
+    small: "#1cc88a",
+  },
+  {
+    color: "info",
+    text: "Info",
+    small: "#36b9cc",
+  },
+  {
+    color: "warning",
+    text: "Warning",
+    small: "#f6c23e",
+  },
+  {
+    color: "danger",
+    text: "Danger",
+    small: "#e74a3b",
+  },
+  {
+    color: "secondary",
+    text: "Secondary",
+    small: "#858796",
+  },
+];

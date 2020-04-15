@@ -1,0 +1,16 @@
+.chip {
+    display: inline-block; 
+    font-size: 18px;
+    line-height: 60px;
+    border-radius: 25px;
+    
+  }
+  
+  .chip img {
+    float: right;
+    margin: 0 10px 0 -25px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+   
+  }

@@ -7,13 +7,12 @@ class AppRouter extends React.Component {
     const routes = this.props.routes;
     return (
       <BrowserRouter>
-        <div className="row">
-          <div className="col-3 ">
-            <Sidebar routes={routes}
-            />
+        <div className="row bg-light">
+          <div className="col-2  bg-primary text-white">
+            <Sidebar routes={routes} />
           </div>
 
-          <div className="col-9 ">
+          <div className="col-10 ">
             <Switch>
               {routes.map((route, index) => {
                 console.log(route, "fdsxg");

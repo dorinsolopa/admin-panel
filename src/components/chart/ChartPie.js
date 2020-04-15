@@ -1,5 +1,5 @@
 import React from "react";
-import { Doughnut} from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 
 class ChartPie extends React.Component {
   constructor(props) {
@@ -35,24 +35,26 @@ class ChartPie extends React.Component {
 
   render() {
     return (
-      <div className="card shadow col-lg-5">
-        <div className="card-header py-3">
+      <div className="card shadow col-4 col-lg-4">
+        <div className="card-header ">
           <h5 className="font-weight text-primary">Revenue Sources</h5>
         </div>
         <div className="card-body">
           <Doughnut
-          type="doughnut"
+            type="doughnut"
             data={this.state.chartPie}
             options={{
               title: {
                 display: this.props.displayTitle,
-                fontSize: 10,
+              
               },
               legend: {
                 display: this.props.displayLegend,
                 position: this.props.legendPosition,
               },
             }}
+            height="250%"
+            
           />
         </div>
       </div>

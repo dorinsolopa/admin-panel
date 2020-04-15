@@ -56,13 +56,13 @@ class Chart extends React.Component {
   static defaultProps = {
     displayTitle: true,
     displayLegend: true,
-    legendPosition: "right"
+    legendPosition: "center"
   };
 
   render() {
     return (
-      <div className="card shadow mb-4 col-xl-8 col-lg-7">
-        <div className="card-header py-3">
+      <div className="card shadow col-7 col-lg-7 mr-3">
+        <div className="card-header">
           <h5 className="font-weight text-primary">Earnings Overview</h5>
         </div>
         <div className="card-body">

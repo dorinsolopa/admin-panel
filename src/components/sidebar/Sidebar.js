@@ -1,45 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./sidebar.css";
 
 class Sidebar extends React.Component {
-  // constructor(props) {
-  //   this.state = {
-  //     visible: false,
-  //   };
-  //   this.handleMouseDown = this.handleMouseDown.bind(this);
-  //   this.toggleMenu = this.toggleMenu.bind(this);
-  // }
-  // handleMouseDown(e) {
-  //   this.toggleMenu();
-  //   console.log("clicked");
-  //   e.stopPropagation();
-  // }
-
-  // toggleMenu() {
-  //   this.setState({
-  //     visible: !this.state.visible,
-  //   });
-  // }
   render() {
     const routes = this.props.routes.filter((route) => {
       return route.menu === true;
     });
 
     return (
-      <div className="sidebar-wrapper " id="sidebar">
-        <div className="">
-          <i className="fas fa-laugh-wink"></i>
-          <h3>SD ADMIN</h3>
+      <div className="nav-side-menu text-white ">
+        <div className=" text-center ">
+        <div className="sidebar-brand-icon rotate-n-15">
+          <i className="fa fa-laugh-wink fa-2x"></i>
+          </div>
+          <h5>SD ADMIN</h5>
         </div>
-
+<hr className="sidebar-divider my-1" />
         <div>
-          <ul className="navbar-nav">
+          <ul className="bg-primary">
             {routes.map((route, index) => {
               return (
-                <li className="nav-item">
-                  <i className="fa fa-dashboard"></i>
-                  <Link to={route.path}>{route.name}
-                  <i className={route.icon}></i>
+                <li className="nav-item ">
+                  <Link to={route.path} className="s-sidebar__nav-link">
+                    {route.name}
+                    <i className={route.icon}></i>
                   </Link>
                 </li>
               );

@@ -5,7 +5,7 @@ class ChartBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        chartBar: props.chartBar,
+      chartBar: props.chartBar,
     };
   }
 
@@ -22,7 +22,14 @@ class ChartBar extends React.Component {
           {
             label: "Earnings:$",
             data: [4215, 5312, 6251, 7841, 9821, 14984],
-            backgroundColor: ["#030AF8","#030AF8","#030AF8","#030AF8","#030AF8","#030AF8",],
+            backgroundColor: [
+              "#030AF8",
+              "#08F1BC",
+              "#030AF8",
+              "#030AF8",
+              "#030AF8",
+              "#030AF8",
+            ],
           },
         ],
       },
@@ -36,13 +43,13 @@ class ChartBar extends React.Component {
 
   render() {
     return (
-      <div className="card shadow col-lg-8">
+      <div className="card shadow col-7 col-lg-7 m-2">
         <div className="card-header py-3">
           <h5 className="font-weight text-primary">Bar Chart</h5>
         </div>
-        <div className="card-body">
+        <div className="card-body ">
           <Bar
-            type="doughnut"
+            type="bar"
             data={this.state.chartBar}
             options={{
               title: {
@@ -55,6 +62,14 @@ class ChartBar extends React.Component {
               },
             }}
           />
+          <div>
+            <hr />
+            <p>
+              Styling for the bar chart can be found in the
+              /js/demo/chart-bar-demo.js <code>/js/demo/chart-bar-demo.js</code>
+              file.
+            </p>
+          </div>
         </div>
       </div>
     );
