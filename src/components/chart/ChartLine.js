@@ -1,11 +1,11 @@
 import React from "react";
-import {Line } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 class Chart extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      chartData: props.chartData ,
+      chartData: props.chartData,
     };
   }
 
@@ -29,7 +29,6 @@ class Chart extends React.Component {
           "Sep",
           "Oct",
           "Nov",
-          
         ],
         datasets: [
           {
@@ -56,7 +55,7 @@ class Chart extends React.Component {
   static defaultProps = {
     displayTitle: true,
     displayLegend: true,
-    legendPosition: "center"
+    legendPosition: "center",
   };
 
   render() {

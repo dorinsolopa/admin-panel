@@ -1,10 +1,12 @@
 import React from "react";
 import { tableData } from "../../components/variable/Variable";
 import CardTable from "./CardTable";
-
+import Navbar from "../../components/navbar/Navbar"
 class Tables extends React.Component {
   render() {
     return (
+      <React.Fragment>
+      <Navbar />
       <div className="container">
         <h1>Tables</h1>
         <p className="mb-4">
@@ -27,7 +29,7 @@ class Tables extends React.Component {
         </footer>
        
       </div>
-    
+      </React.Fragment>
     );
   }
 }

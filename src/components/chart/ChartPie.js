@@ -53,7 +53,7 @@ class ChartPie extends React.Component {
                 position: this.props.legendPosition,
               },
             }}
-            height="250%"
+            height="280%"
             
           />
         </div>

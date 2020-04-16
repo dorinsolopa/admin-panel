@@ -11,14 +11,14 @@ class Sidebar extends React.Component {
     return (
       <div className="nav-side-menu text-white ">
         <div className=" text-center ">
-        <div className="sidebar-brand-icon rotate-n-15">
-          <i className="fa fa-laugh-wink fa-2x"></i>
+          <div className="sidebar-brand-icon rotate-n-15">
+            <i className="fa fa-laugh-wink fa-2x"></i>
           </div>
           <h5>SD ADMIN</h5>
         </div>
-<hr className="sidebar-divider my-1" />
+        <hr className="sidebar-divider " />
         <div>
-          <ul className="bg-primary">
+          <ul className="bg-primary ">
             {routes.map((route, index) => {
               return (
                 <li className="nav-item ">

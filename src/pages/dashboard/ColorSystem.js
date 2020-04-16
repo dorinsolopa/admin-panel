@@ -4,7 +4,7 @@ import ColorCard from "../../components/color-card/ColorCard";
 class ColorSystem extends React.Component {
   render() {
     return (
-      <div className="card shadow ">
+      <div className=" shadow bg-light">
         <div className="row mt-4">
           {color.map((ex, index) => {
             return (

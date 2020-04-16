@@ -1,10 +1,10 @@
 import React from "react";
-import {chartBar} from "../variable/Variable"
+import { chartBar } from "../variable/Variable";
 class HorizontalBar extends React.Component {
   render() {
     return (
       <div className="card shadow ">
-        <div className="card-header py-3">
+        <div className="card-header ">
           <h5 className="font-weight text-primary"> Project </h5>
         </div>
 
@@ -12,7 +12,7 @@ class HorizontalBar extends React.Component {
           return (
             <div className="card-body ">
               <h4 className="small font-weight-bold">{bar.name}</h4>
-              <span className="float-right"> {bar.load} </span>
+              <span className="float-top"> {bar.load} </span>
               <div className="progress">
                 <div
                   className={`progress-bar bg-${bar.color}`}

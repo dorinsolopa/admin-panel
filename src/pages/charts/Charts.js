@@ -2,11 +2,12 @@ import React from "react";
 import Chart from "../../components/chart/ChartLine";
 import ChartPie from "../../components/chart/ChartPie";
 import ChartBar from "../../components/chart/ChartBar";
-
+import Navbar from "../../components/navbar/Navbar"
 class Charts extends React.Component {
   render() {
     return (
       <React.Fragment>
+      <Navbar />
         <div>
           <h3 className="mb-2 text-gray">Charts</h3>
           <p className="mb-4">
@@ -18,10 +19,16 @@ class Charts extends React.Component {
             </a>
           </p>
         </div>
-        <div className=" d-flex align-content-center flex-wrap  ">
-          <Chart legendPosition="bottom" />
-          <ChartPie />
-          <ChartBar legendPosition="bottom" />
+        <div className=" row">
+          <div className="col-lg-8 ">
+            <Chart legendPosition="bottom" />
+          </div>
+          <div className="col-lg-4  pr-4">
+            <ChartPie legendPosition="bottom" />
+          </div>
+          <div className="col-lg-8 mt-5 pb-3">
+            <ChartBar legendPosition="bottom" />
+          </div>
         </div>
         <footer className="text-center">Copyright © Your Website 2020</footer>
       </React.Fragment>

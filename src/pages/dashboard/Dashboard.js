@@ -1,5 +1,4 @@
 import React from "react";
-import Navigation from "./Navigation";
 import Card from "../../components/card/Card";
 import Chart from "../../components/chart/ChartLine";
 import { cardsData } from "../../components/variable/Variable";
@@ -8,11 +7,13 @@ import HorizontalBar from "../../components/chart/HorizontalBar";
 import ColorSystem from "../dashboard/ColorSystem";
 import Illustrations from "../dashboard/Illustrations";
 import Paragraph from "../dashboard/Paragraph";
+import Navbar from "../../components/navbar/Navbar"
+
 class Dashboard extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Navigation />
+        <Navbar />
 
         <div className="d-sm-flex align-items-center justify-content-between  mb-4">
           <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -35,26 +36,26 @@ class Dashboard extends React.Component {
           })}
         </div>
         <div className="row  ">
-          <div className="col-lg-8">
+          <div className="col-lg-8 mt-4">
             <Chart chartData={this.props.chartData} legendPosition="bottom" />
-            </div>
-            <div className="col-lg-4">
+          </div>
+          <div className="col-lg-4 mt-4 pr-4">
             <ChartPie legendPosition="bottom" />
-            </div>
-            </div>
-            <div className="row">
-            <div className="col-lg-6">
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-6 mt-4">
             <HorizontalBar />
-            </div>
-            <div className="col-lg-6">
+          </div>
+          <div className="col-lg-6 mt-4  pr-4">
             <Illustrations />
-            </div>
-            </div>
-            <div className="row">
-            <div className="col-lg-6">
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-6 mt-4">
             <ColorSystem />
-            </div>
-            <div className="col-lg-6">
+          </div>
+          <div className="col-lg-6 mt-4  pr-4">
             <Paragraph />
           </div>
         </div>

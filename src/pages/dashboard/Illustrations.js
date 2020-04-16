@@ -1,5 +1,5 @@
 import React from "react";
-import  posting from "../../assets/posting.png"
+
 
 
 class Illustrations extends React.Component {
