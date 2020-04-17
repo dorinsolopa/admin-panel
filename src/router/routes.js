@@ -9,7 +9,7 @@ export const routes = [
     component: Dashboard,
     name: " Dashboard",
     menu: true,
-    icon: "fa fa-dashboard"
+    icon: "fa fa-dashboard "
   },
 
   {

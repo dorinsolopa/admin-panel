@@ -9,7 +9,7 @@ class Sidebar extends React.Component {
     });
 
     return (
-      <div className="nav-side-menu text-white ">
+      <div className="nav-side-menu text-white mb-3 ">
         <div className=" text-center ">
           <div className="sidebar-brand-icon rotate-n-15">
             <i className="fa fa-laugh-wink fa-2x"></i>
@@ -17,16 +17,16 @@ class Sidebar extends React.Component {
           <h5>SD ADMIN</h5>
         </div>
         <hr className="sidebar-divider " />
-        <div>
-          <ul className="bg-primary ">
+        <div className="sidebar">
+          <ul className="">
             {routes.map((route, index) => {
               return (
-                <li className="nav-item ">
+                <a active >
                   <Link to={route.path} className="s-sidebar__nav-link">
                     {route.name}
                     <i className={route.icon}></i>
                   </Link>
-                </li>
+                </a>
               );
             })}
           </ul>

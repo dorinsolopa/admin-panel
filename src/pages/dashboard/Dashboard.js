@@ -7,7 +7,7 @@ import HorizontalBar from "../../components/chart/HorizontalBar";
 import ColorSystem from "../dashboard/ColorSystem";
 import Illustrations from "../dashboard/Illustrations";
 import Paragraph from "../dashboard/Paragraph";
-import Navbar from "../../components/navbar/Navbar"
+import Navbar from "../../components/navbar/Navbar";
 
 class Dashboard extends React.Component {
   render() {
@@ -16,8 +16,10 @@ class Dashboard extends React.Component {
         <Navbar />
 
         <div className="d-sm-flex align-items-center justify-content-between  mb-4">
-          <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-          <a className=" d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+          <h1 className="h3 mb-0 text-gray-800 ml-2"> 
+      
+          Dashboard</h1>    <i className="fa fa-dashboard fa-2x"></i>
+          <a className=" d-sm-inline-block btn btn-sm btn-primary shadow mr-2">
             <i className="fa fa-download"></i>
             Generate Report
           </a>
