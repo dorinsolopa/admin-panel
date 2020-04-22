@@ -20,7 +20,7 @@ class Pagination extends React.Component {
   constructor(props) {
     super(props);
     const { totalRecords = null, pageLimit = 30, pageNeighbours = 0 } = props;
-console.log(totalRecords,"totalRecord",props)
+    console.log(totalRecords, "totalRecord", props);
     this.pageLimit = typeof pageLimit === "number" ? pageLimit : 30;
     this.totalRecords = typeof totalRecords === "number" ? totalRecords : 0;
 
@@ -130,7 +130,6 @@ console.log(totalRecords,"totalRecord",props)
                       aria-label="Previous"
                       onClick={this.handleMoveLeft}
                     >
-                      <span aria-hidden="true">&laquo;</span>
                       <span className="sr-only">Previous</span>
                     </a>
                   </li>
@@ -140,13 +139,12 @@ console.log(totalRecords,"totalRecord",props)
                 return (
                   <li key={index} className="page-item">
                     <a
+                    href="#"
                       className="page-link"
                       aria-label="Next"
                       onClick={this.handleMoveRight}
                     >
-                      <span aria-hidden="true">&raquo;</span>
                       <span className="sr-only">Next</span>
-                      
                     </a>
                   </li>
                 );
@@ -162,7 +160,6 @@ console.log(totalRecords,"totalRecord",props)
                     onClick={(e) => this.handleClick(page, e)}
                   >
                     {page}
-                   
                   </a>
                 </li>
               );

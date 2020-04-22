@@ -418,7 +418,6 @@ export const tableData = [
     startDate: "2009/01/12",
     salary: "$86,000",
   },
-  
 ];
 
 export const chartBar = [
@@ -483,5 +482,26 @@ export const color = [
     color: "secondary",
     text: "Secondary",
     small: "#858796",
+  },
+];
+
+export const dropdownInfo = [
+  {
+    color: "primary",
+    icon: "fa fa-file fa-lg text-white ",
+    text: "December 12, 2020",
+    info: "A new monthly report is ready to download !",
+  },
+  {
+    color: "success",
+    icon: "fas fa-donate fa-lg text-white",
+    text: "December 7, 2020",
+    info: "$290.29 has been deposited into your account!",
+  },
+  {
+    color: "warning",
+    icon: "fa fa-exclamation-triangle fa-lg text-white align-items-center",
+    text: "December 2, 2020",
+    info: "Spending Alert: We've noticed unusually high spending for your account.",
   },
 ];

@@ -1,5 +1,7 @@
 import React from "react";
-
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownAlert from "../dropdown_alert/DropdownAlert";
+import { dropdownInfo } from "../../components/variable/Variable";
 class Navbar extends React.Component {
   render() {
     return (
@@ -25,48 +27,38 @@ class Navbar extends React.Component {
         >
           <ul className="nav nav-pills nav-fill ">
             {/* Bell */}
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                <i class="fa fa-bell"></i>
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
+            <Dropdown>
+              <Dropdown.Toggle variant="light" id="dropdown-basic">
+                <i className="fa fa-bell"></i>
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item className="list-group">
+                  <h6 className="dropdown-header bg-primary">ALERTS CENTER</h6>
+                  {dropdownInfo.map((drop, index) => {
+                    return (
+                      <DropdownAlert
+                        color={drop.color}
+                        icon={drop.icon}
+                        text={drop.text}
+                        info={drop.info}
+                      />
+                    );
+                  })}
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             {/* Dropdown */}
-            <div className="dropdown ">
-              <button
-                class="btn btn-default dropdown-toggle"
-                type="button"
-                id="menu1"
-                data-toggle="dropdown"
-              >
+            <Dropdown>
+              <Dropdown.Toggle variant="light" id="dropdown-basic">
                 <i className="fa fa-envelope"></i>
-                <span class="caret"></span>
-              </button>
+              </Dropdown.Toggle>
 
-              <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li role="presentation">
-                  <a role="menuitem" href="#">
-                    HTML
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" href="#">
-                    CSS
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" href="#">
-                    JavaScript
-                  </a>
-                </li>
-                <li role="presentation" class="divider"></li>
-                <li role="presentation">
-                  <a role="menuitem" href="#">
-                    About Us
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </ul>
           {/* Contact Chips */}
           <div className="split right">
