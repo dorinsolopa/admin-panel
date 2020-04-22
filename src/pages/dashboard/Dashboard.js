@@ -15,10 +15,8 @@ class Dashboard extends React.Component {
       <React.Fragment>
         <Navbar />
 
-        <div className="d-sm-flex align-items-center justify-content-between  mb-4">
-          <h1 className="h3 mb-0 text-gray-800 ml-2"> 
-      
-          Dashboard</h1>    <i className="fa fa-dashboard fa-2x"></i>
+        <div className="d-sm-flex align-items-center justify-content-between  m-4">
+          <h1 className="h3 mb-0 text-gray-800 ml-2">Dashboard</h1>
           <a className=" d-sm-inline-block btn btn-sm btn-primary shadow mr-2">
             <i className="fa fa-download"></i>
             Generate Report

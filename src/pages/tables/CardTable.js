@@ -1,7 +1,38 @@
 import React from "react";
+import Pagination from "../../components/pagination/Pagination";
 
 class CardTable extends React.Component {
+  state = {
+    currentData: [],
+    currentPage: null,
+    totalItems: null,
+  };
+
+  componentDidMount() {
+    const totalItems = this.props.table.length;
+    this.setState({ totalItems: totalItems });
+  }
+
+  onPageChanged = (data) => {
+    const { currentPage, totalPages, pageLimit } = data;
+    const offset = (currentPage - 1) * pageLimit;
+    const currentData = this.props.table.slice(offset, offset + pageLimit);
+
+    this.setState({ currentPage, currentData, totalPages });
+  };
+
   render() {
+    const { currentPage, totalItems } = this.state;
+    if (!totalItems) return null;
+    console.log(totalItems, "totalItems");
+    const headerClass = [
+      "text-dark py-2 pr-4 m-0",
+      currentPage ? "border-gray border-right" : "",
+    ]
+
+      .join(" ")
+      .trim();
+
     return (
       <div className="table-responsive">
         <div className="dataTables_wrapper ">
@@ -52,7 +83,7 @@ class CardTable extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {this.props.table.map((row, index) => {
+                  {this.state.currentData.map((row, index) => {
                     return (
                       <tr>
                         <td>{row.name}</td>
@@ -66,21 +97,25 @@ class CardTable extends React.Component {
                   })}
                 </tbody>
                 <tfoot>
-                    <tr>
+                  <tr>
                     <th>Name</th>
                     <th>Position</th>
                     <th>Office</th>
                     <th>Age</th>
                     <th>Start date</th>
-                    <th>Salary</th>  
-                    </tr>
+                    <th>Salary</th>
+                  </tr>
                 </tfoot>
               </table>
             </div>
+           
           </div>
-          <div className="text-center">
-           <p >Showing 1 to .. of .. entries</p>
-          </div>
+          <Pagination
+              totalRecords={totalItems}
+              pageLimit={7}
+              pageNeighbours={1}
+              onPageChanged={this.onPageChanged}
+            />
         </div>
       </div>
     );
