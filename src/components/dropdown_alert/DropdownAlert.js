@@ -6,8 +6,8 @@ class DropdownAlert extends React.Component {
         
       <a className="d-flex  list-group-item list-group-item-action ">
         <div className="m-2 ">
-          <div className={`rounded-circle text-center mr-2 bg-${this.props.color}`} style={{height:"35px",width:"35px"}}>
-              <i className={this.props.icon}></i>
+          <div className={`rounded-circle text-center ml-auto bg-${this.props.color}`} style={{height:"35px",width:"35px"}}>
+              <i className={`pt-2 ${this.props.icon}`}></i>
           </div>
         </div>
         <div >
