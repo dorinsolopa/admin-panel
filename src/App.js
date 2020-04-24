@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import AppRouter from "./router/AppRouter";
-import { routes } from "./router/routes";
+import { routes , publicRoutes} from "./router/routes";
 
 class App extends React.Component {
   constructor(props) {
@@ -25,7 +25,9 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <AppRouter routes={routes} />
+        <AppRouter routes={routes} 
+          publicRoutes={publicRoutes}
+        />
       </React.Fragment>
     );
   }

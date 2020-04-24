@@ -58,6 +58,7 @@ class Dashboard extends React.Component {
           <div className="col-lg-6 mt-4  pr-4">
             <Paragraph />
           </div>
+          
         </div>
         <footer className="text-center">Copyright © Your Website 2020</footer>
       </React.Fragment>

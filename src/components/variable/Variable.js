@@ -8,7 +8,7 @@ export const cardsData = [
   {
     title: "EARNINGS (ANNUAL)",
     price: "$215,000 ",
-    icon: "fa fa-dollar fa-2x",
+    icon: "fa fa-dollar-sign fa-2x",
     type: "success",
   },
   {

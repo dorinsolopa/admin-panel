@@ -1,21 +1,17 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Sidebar from "../components/sidebar/Sidebar";
 
+import AppLayout from "./AppLayout"
 class AppRouter extends React.Component {
   render() {
     const routes = this.props.routes;
+    const allRoutes = [].concat(routes, this.props.publicRoutes)
     return (
       <BrowserRouter>
-        <div className="row bg-light">
-          <div className="col-2  bg-primary text-white">
-            <Sidebar routes={routes} />
-          </div>
-
-          <div className="col-10 ">
+      <AppLayout routes={routes} >
+        
             <Switch>
-              {routes.map((route, index) => {
-                console.log(route, "fdsxg");
+              {allRoutes.map((route, index) => {
                 return (
                   <Route
                     path={route.path}
@@ -32,8 +28,7 @@ class AppRouter extends React.Component {
                 }}
               />
             </Switch>
-          </div>
-        </div>
+        </AppLayout>
       </BrowserRouter>
     );
   }

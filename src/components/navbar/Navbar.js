@@ -2,8 +2,38 @@ import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownAlert from "../dropdown_alert/DropdownAlert";
 import { dropdownInfo } from "../../components/variable/Variable";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const CustomToast = ({ closeToast }) => {
+  return (
+    <div>
+      <h4 className="text-center">Ready to Leave?</h4>
+      <hr />
+      <p className="text-center">Select "Logout" below if you are ready to end your current session.</p>
+
+      <div className="modal-footer">
+        <button className="btn btn-secondary" type="button">
+          Cancel
+        </button>
+        <a
+          className="btn btn-primary"
+          href="/login"
+          onClick={closeToast}
+        >
+          Logout
+        </a>
+      </div>
+    </div>
+  );
+};
+
+toast.configure();
 class Navbar extends React.Component {
   render() {
+    const notify = () => {
+      toast(<CustomToast />, { position: toast.POSITION.TOP_CENTER });
+    };
     return (
       <nav className="navbar navbar-expand-lg navbar-white bg-white">
         <div className="input-group mb-2 " style={{ width: "30%" }}>
@@ -26,9 +56,9 @@ class Navbar extends React.Component {
           id="navbarSupportedContent"
         >
           <ul className="nav nav-pills nav-fill ">
-            {/* Bell */}
+            {/* Bell Dropdown*/}
             <Dropdown>
-              <Dropdown.Toggle variant="light" id="dropdown-basic">
+              <Dropdown.Toggle variant="white" id="dropdown-basic">
                 <i className="fa fa-bell"></i>
               </Dropdown.Toggle>
               <Dropdown.Menu>
@@ -47,9 +77,9 @@ class Navbar extends React.Component {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            {/* Dropdown */}
+            {/* Dropdown  Envelope*/}
             <Dropdown>
-              <Dropdown.Toggle variant="light" id="dropdown-basic">
+              <Dropdown.Toggle variant="white" id="dropdown-basic">
                 <i className="fa fa-envelope"></i>
               </Dropdown.Toggle>
 
@@ -60,16 +90,45 @@ class Navbar extends React.Component {
               </Dropdown.Menu>
             </Dropdown>
           </ul>
+
           {/* Contact Chips */}
-          <div className="split right">
-            <div className="centered">
-              <small className="font-weight-bold">John </small>
-              <img
-                src={require("../../assets/avatar2.png")}
-                style={{ width: "42px", borderRadius: "50%" }}
-              />
-            </div>
-          </div>
+
+          <Dropdown>
+            <Dropdown.Toggle
+              variant="white"
+              id="dropdown-custom-components"
+              style={{ height: "42px" }}
+            >
+              <div className="split right">
+                <div className="centered">
+                  <small className="font-weight-bold">John </small>
+                  <img
+                    src={require("../../assets/avatar2.png")}
+                    style={{ width: "32px", borderRadius: "50%" }}
+                  />
+                </div>
+              </div>
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item>
+                <i className="fa fa-user fa-sm fa-fw mr-2 "></i>
+                Profile
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <i className="fa fa-cogs fa-sm fa-fw mr-2"></i>
+                Settings
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <i className="fa fa-list-ul fa-sm fa-fw mr-2"></i>
+                Activity Log
+              </Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item>
+                <i className="fa fa-sign-out-alt fa-sm fa-fw mr-2"></i>
+                <button onClick={notify} className="border-0 bg-white"> Logout</button>
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </nav>
     );
